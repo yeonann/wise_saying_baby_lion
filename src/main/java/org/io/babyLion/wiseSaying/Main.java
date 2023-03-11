@@ -8,5 +8,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         new App(sc).run();
 
+        sc.close();
     }
 }
