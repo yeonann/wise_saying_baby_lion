@@ -5,7 +5,6 @@ import org.io.babyLion.wiseSaying.WiseSay;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class WiseSayController {
 
