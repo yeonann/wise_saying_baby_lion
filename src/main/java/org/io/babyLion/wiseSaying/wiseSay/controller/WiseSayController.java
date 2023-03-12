@@ -1,5 +1,6 @@
 package org.io.babyLion.wiseSaying.wiseSay.controller;
 
+import org.io.babyLion.wiseSaying.Container;
 import org.io.babyLion.wiseSaying.WiseSay;
 
 import java.util.ArrayList;
@@ -8,23 +9,22 @@ import java.util.Scanner;
 
 public class WiseSayController {
 
-    private final Scanner sc;
     private int number;
     private List<WiseSay> wiseSays;
 
-    public WiseSayController(Scanner sc) {
-        this.sc = sc;
+    public WiseSayController() {
         this.number = 0;
         this.wiseSays = new ArrayList<>();
     }
 
     public void write () {
+
         int id = number + 1;
 
         System.out.print("명언 : ");
-        String content = sc.nextLine().trim();
+        String content = Container.getSc().nextLine().trim();
         System.out.print("작가 : ");
-        String author = sc.nextLine().trim();
+        String author = Container.getSc().nextLine().trim();
 
         WiseSay say = new WiseSay(id, content, author);
         wiseSays.add(say);
